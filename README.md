@@ -30,8 +30,15 @@ source ~/SPEC-CPU-Benchmarking-Projects/cpuv8/cpuv8-0.4.0_slim/shrc
 
 ### Step 3 
 
+Extracting the 788.prime_r archive in benchspec
 
-### Step
+```bash
+cd benchspec/CPU
+```
+```bash
+unzip 788.prime_r.zip
+```
+### Step 4
 
 ### Step
 
