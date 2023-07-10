@@ -1,0 +1,15 @@
+$name             = 'specspeed';
+$unitbase         = 'SPEC';
+$metricbase       = 'int_and_fp';
+$metric           = 'CPUv8';
+$ref              = 'refspeed';
+$train            = 'train';
+$test             = 'test';
+$speed_multiplier = 1;
+$rate_multiplier  = 0;   # Disallow rate runs with this benchset
+$output           = 1;
+@benchmarks = qw(
+        998.specrand_s
+);
+
+1;

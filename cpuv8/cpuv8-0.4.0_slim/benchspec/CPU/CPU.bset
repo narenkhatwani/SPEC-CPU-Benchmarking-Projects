@@ -1,0 +1,15 @@
+$name        = 'cpu';
+$unitbase    = 'SPEC';
+$metricbase  = 'int_and_fp';
+$metric      = 'CPUv8';
+$ref         = 'refrate';
+$train       = 'train';
+$test        = 'test';
+$output      = 0;
+@benchmarks = qw(
+        998.specrand_s
+        999.specrand_r
+        788.prime_r
+);
+
+1;

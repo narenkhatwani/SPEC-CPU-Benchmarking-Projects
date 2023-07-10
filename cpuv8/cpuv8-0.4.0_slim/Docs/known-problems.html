@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Known Problems - CPUv8</title>
+      <!-- You'll want a nice wide (132 column) screen when editing this ......................................................... -->
+
+      <link rel="STYLESHEET" href="css/cpudocs.css" type="text/css" />
+      <link rel="STYLESHEET" href="css/cpudocsNoLinkie.css" media="print" type="text/css" />
+      <style type="text/css">
+body { background: white; color: black; }
+li { margin-top:.4em; margin-bottom:.4em; }
+h2 { border-top: medium solid black; }
+h3 { font-size:110%; border-top:thin solid gray;}
+.ticket { font-size:90%; font-family:monospace;}
+      </style>
+
+   </head>
+   <body>
+
+      <h1>SPEC CPU&reg;v8 Known Problems</h1>
+      <table class="version">
+         <tr>
+            <td>Latest: <a class="external" href="https://www.spec.org/cpuv8/Docs/">www.spec.org/cpuv8/Docs/</a></td>
+         </tr>
+      </table>
+
+      <p class="contents">Contents</p>
+      <p class="contentsl1"><a href="#intro">Introduction</a></p>
+      <p class="contentsl1"><a href="#open">Open Problem Reports</a></p>
+      <p class="contentsl2"><a href="#problem03">3. </a>Headings may appear to be off-center in ASCII plain text reports. </p>
+      <p class="contentsl2"><a href="#problem05">5. </a>Why can't I override fields from sysinfo?</p>
+      <p class="contentsl2"><a href="#problem08">8.</a> When measuring power, <samp>runcpu</samp> may hang.</p>
+      <!-- Template
+         <p class="contentsl2"><a href="#problemNN">NN.</a> <samp class="nb">message</samp> with such-and-such mumble  </p>
+      -->
+
+      <p class="contentsl1"><a href="#closed">Closed Problem Reports</a></p>
+      <p class="contentsl2"><a href="#problem01">1. </a>Some lines may be tiny in PDF reports. </p>
+      <p class="contentsl2"><a href="#problem02">2. </a>Some lines may be too wide in HTML reports. </p>
+      <p class="contentsl2"><a href="#problem04">4. </a>Plain text columns should have better alignment.</p>
+      <p class="contentsl2"><a href="#problem06">6. </a>The runcpu <samp class="nb">--comment</samp> option must not contain any
+      blanks.</p>
+      <p class="contentsl2"><a href="#problem07">7. </a><samp class="nb">Can't use an undefined value as an ARRAY
+         reference</samp> while formatting results. </p>
+
+
+      <h2 id="intro">Introduction</h2>
+
+      <p>This document describes known problems in SPEC CPU&reg;v8, a product of the SPEC&reg; non-profit corporation <a
+          href="https://www.spec.org/spec/" class="external">(about SPEC)</a>.</p>
+
+      <!-- ReUsableBegin: Problems? Try these ......................................................................  -->
+      <div class="l1" style="width:500px;padding:3px 5px;border:thin solid gray;">
+         <p class="snug">Do you have a problem with SPEC CPUv8?  
+         <br />Try these,  <span class="u">in this order</span>:</p>
+         <ol class="snug">
+            <li>Update your copy with 
+               <a class="external" href="https://www.spec.org/cpuv8/Docs/runcpu.html#update">runcpu --update</a>.</li>
+            <li>Check the latest version of 
+               <a class="external" href="https://www.spec.org/cpuv8/Docs/faq.html">Frequently Asked Questions</a>.</li>
+            <li>Check the latest version of 
+               <a class="external" href="https://www.spec.org/cpuv8/Docs/known-problems.html">Known Problems</a>. </li>
+            <li>Check the 
+               <a  class="external" href="https://www.spec.org/cpuv8/src.alt/">src.alt</a> list. &nbsp;&nbsp; 
+               <span style="font-size:smaller;"> 
+                  [<a class="external" href="https://www.spec.org/cpuv8/Docs/config.html#src.alt">What is a src.alt?</a>]
+               </span>
+            </li> 
+            <li><a class="external" href="https://www.spec.org/cpuv8/Docs/techsupport.html">Contact SPEC</a>.</li>
+         </ol> 
+      </div>
+      <!-- Problems? Try these ReUsableEnd ......................................................................  -->
+
+
+      <p>SPEC CPUv8 was tested on a variety of systems prior to release, including Unix, Linux, and Windows systems.
+      Nevertheless, as with any software product, problems may be found too late in the testing process to be fixed in the
+      release, or may be discovered after release.</p>
+
+      <p>If you discover problems that are not listed here or in the 
+      <a class="external" href="https://www.spec.org/cpuv8/Docs/faq.html">FAQ</a>, please 
+      <a class="external" href="techsupport.html">report them to SPEC</a>.</p> 
+
+      <p>About the format of this document:</p>
+      <ul>
+         <li>Problems may be added in the <a href="#open">Open</a> section from time to time.  In each case, a workaround is
+            given, if one is known.  </li>
+         <li>When problems are fixed, they are moved to the <a href="#closed">Closed</a> section. </li>
+      </ul>
+
+      <p style="font-size:80%">Notice to maintainers: When updating this document, please do not ever re-use problem numbers.</p>
+
+
+      <!--  ======================================================================================= -->
+      <h2 id="open">Open Problem Reports</h2>
+
+      <p>Please see the latest on-line version of this document for information on open problems and suggested workarounds.</p>
+
+      <!--
+
+         Ticket 705 simultaneous runcpu
+         Ticket 477 make bundle
+         clusters 483 484
+         ticket 538 killing install.sh
+
+      -->
+
+
+
+
+      <!-- 
+         ======================================================================================================================= 
+         Template 
+         (NN = next available problem number).  Please do not ever re-use problem numbers.
+         ======================================================================================================================= 
+         <h3 id="problemNN">NN.  <samp class="nb">message</samp> with such-and-such mumble  </h3>
+         <ul>
+         <li><p><b>Problem summary:</b> one or two lines, emphasizing the SYMPTOMS
+               <span class="ticket">(#TracNNN)</span></p></li>
+         <li><p><b>Details:</b> explain the circumustances under which it happens, the symptoms, the cause, the effects, etc</p></li>
+         <li><p><b>Workaround:</b> </p></li>
+         </ul>
+      -->
+
+
+
+      <!--
+         ======================================================================================================================= 
+         ===                                       closed reports below this point                                           ===
+         ======================================================================================================================= 
+      -->
+      <h2 id="closed">Closed Problem Reports</h2>
+      <div style="background:#f0f0f0">
+
+      </div>
+
+      <p style="border-top:thin solid black;">
+      SPEC CPU&reg;v8 Known Problems:
+      Copyright&nbsp;&copy;&nbsp;2019 Standard Performance Evaluation Corporation (SPEC&reg;)</p>
+      <!-- this space intentionally left blank: some empty space at the bottom increases the probability that clicking on a link in
+         the table of contents will actually position the desired section at the top of your browser window -->
+         <p style="margin:300px 1em;">&nbsp;</p>
+
+
+
+   </body>
+</html>

@@ -1,0 +1,60 @@
+runcpu (1f0adcbf) started at 2023-06-17 23:42:00 on "Narens-MacBook-Pro.local"
+runcpu is: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu
+runcpu: runcpu --action=build --rebuild --config my_project.cfg --ignore_errors --tune all 788
+toolset: macosx-x86
+suite: CPUv8 0.4.0_slim
+
+Locating benchmarks...found 3 benchmarks in 4 benchsets.
+Reading config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_flags.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc'
+
+1 configuration selected:
+
+Action   Benchmarks
+------   ----------------------------------------------------------------------
+build    788.prime_r                                                           
+-------------------------------------------------------------------------------
+
+Setting up environment for running 788.prime_r...
+Starting runcpu for 788.prime_r...
+Running "specperl /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/sysinfo" to gather system information.
+sysinfo: sysinfo c290f470546e9dbf0f70718c55966828
+sysinfo: Getting system information for MacOS X...
+sysinfo: ...getting system info from system profiler
+sysinfo: ...getting system info from sysctl
+sysinfo: ...getting disk info
+uv8/cpuv8-0.4.0_slim/%{lib_dir}/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/%{lib_dir}/lib32:%{ENV_LD_LIBRARY_PATH}"
+MALLOC_CONF = "retain:true"
+
+Benchmarks selected: 788.prime_r
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+Compiling Binaries
+------------------------------------------------------------------------
+  Building 788.prime_r base my_project: (build_base_my_project.0000) [2023-06-17 23:42:02]
+ERROR: Missing reference checksum for /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/src/Makefile at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 1754.
+	Spec::Benchmark::build(Spec::Benchmark::prime_r788=HASH(0x7fa60914c118), Spec::Listfile::entry=HASH(0x7fa609144a08), "") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 1058
+
+ERROR: Failed copying makefile into build directory!
+*** Error building 788.prime_r base
+------------------------------------------------------------------------
+  Building 788.prime_r peak my_project: (build_peak_my_project.0000) [2023-06-17 23:42:02]
+ERROR: Missing reference checksum for /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/src/Makefile at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 1754.
+	Spec::Benchmark::build(Spec::Benchmark::prime_r788=HASH(0x7fa60914b998), Spec::Listfile::entry=HASH(0x7fa60914a740), "") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 1058
+
+ERROR: Failed copying makefile into build directory!
+*** Error building 788.prime_r peak
+
+Build successes for specrate: None
+Build errors for specrate: 788.prime_r(base; CE), 788.prime_r(peak; CE)
+
+Build Complete
+runcpu finished at 2023-06-17 23:42:02; 1 total seconds elapsed
+The log for this run is in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/result/CPUv8.002.log
+
+runcpu finished at 2023-06-17 23:42:02; 2 total seconds elapsed

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE flagsdescription SYSTEM
+       "http://www.spec.org/dtd/cpuflags2.dtd">
+
+<!-- This file defines flags that appear in the sources for 999.specrand.
+
+  Copyright 2019 Standard Performance Evaluation Corporation
+
+-->
+<flagsdescription>
+
+<!-- Normal flags file should suggest a name for themselves -->
+<filename>788.prime_r.flags</filename>
+
+<title>788.prime_r Flags</title>
+
+<header>
+<![CDATA[
+<p>There are only a few preprocessor macros used in 788.prime_r.
+Because they are either set automatically by the compilation system or would
+break the build or run, attempting to change them is not allowed.</p>
+]]>
+</header>
+
+</flagsdescription>

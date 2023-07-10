@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------
+  W A R N I N G      W A R N I N G      W A R N I N G      W A R N I N G
+--------------------------------------------------------------------------
+The following text file was automatically generated from a document that
+you really should read in HTML format.  This text document is only a poor
+fallback if you cannot read HTML, and using it is NOT RECOMMENDED.
+
+To read this document in the recommended way, point your favorite web
+browser at one of these 3 places:
+(1) The SPEC site https://www.spec.org/cpuv8/Docs/
+(2) The Docs directory from the original CPUv8 ISO image
+(3) The Docs directory on the system where you have installed
+    your SPEC CPUv8 tree - for example:
+    /spec/cpuv8/Docs/ (Unix) or D:\spec\cpuv8\Docs\ (Windows)
+--------------------------------------------------------------------------
+  W A R N I N G      W A R N I N G      W A R N I N G      W A R N I N G
+--------------------------------------------------------------------------
+
+                          SPEC CPU(R)v8 Known Problems
+
+   Latest: www.spec.org/cpuv8/Docs/
+
+   Contents
+
+   Introduction
+
+   Open Problem Reports
+
+   3. Headings may appear to be off-center in ASCII plain text reports.
+
+   5. Why can't I override fields from sysinfo?
+
+   8. When measuring power, runcpu may hang.
+
+   Closed Problem Reports
+
+   1. Some lines may be tiny in PDF reports.
+
+   2. Some lines may be too wide in HTML reports.
+
+   4. Plain text columns should have better alignment.
+
+   6. The runcpu --comment option must not contain any blanks.
+
+   7. Can't use an undefined value as an ARRAY reference while formatting
+   results.
+
+Introduction
+
+   This document describes known problems in SPEC CPU(R)v8, a product of the
+   SPEC(R) non-profit corporation (about SPEC).
+
+   Do you have a problem with SPEC CPUv8?
+   Try these, in this order:
+
+    1. Update your copy with runcpu --update.
+    2. Check the latest version of Frequently Asked Questions.
+    3. Check the latest version of Known Problems.
+    4. Check the src.alt list.    [What is a src.alt?]
+    5. Contact SPEC.
+
+   SPEC CPUv8 was tested on a variety of systems prior to release, including
+   Unix, Linux, and Windows systems. Nevertheless, as with any software
+   product, problems may be found too late in the testing process to be fixed
+   in the release, or may be discovered after release.
+
+   If you discover problems that are not listed here or in the FAQ, please
+   report them to SPEC.
+
+   About the format of this document:
+
+     * Problems may be added in the Open section from time to time. In each
+       case, a workaround is given, if one is known.
+     * When problems are fixed, they are moved to the Closed section.
+
+   Notice to maintainers: When updating this document, please do not ever
+   re-use problem numbers.
+
+Open Problem Reports
+
+   Please see the latest on-line version of this document for information on
+   open problems and suggested workarounds.
+
+Closed Problem Reports
+
+   SPEC CPU(R)v8 Known Problems: Copyright (c) 2019 Standard Performance
+   Evaluation Corporation (SPEC(R))
+
+

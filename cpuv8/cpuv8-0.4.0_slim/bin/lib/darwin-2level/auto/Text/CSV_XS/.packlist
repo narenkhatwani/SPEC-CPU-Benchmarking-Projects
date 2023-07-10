@@ -1,0 +1,3 @@
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/Text/CSV_XS.pm relocate_as=../../../Text/CSV_XS.pm
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/auto/Text/CSV_XS/CSV_XS.bundle relocate_as=CSV_XS.bundle
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/man/man3/Text::CSV_XS.3 relocate_as=../../../../../../../../man/man3/Text::CSV_XS.3

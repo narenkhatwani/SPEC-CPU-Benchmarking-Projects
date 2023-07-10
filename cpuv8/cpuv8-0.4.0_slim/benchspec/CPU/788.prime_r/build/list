@@ -1,0 +1,3 @@
+build_base_my_project.0000 dir=/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_base_my_project.0000 label=my_project lock=0 tune=base type=build username=narenkhatwani
+build_peak_my_project.0000 dir=/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_peak_my_project.0000 label=my_project lock=0 tune=peak type=build username=narenkhatwani
+__END__

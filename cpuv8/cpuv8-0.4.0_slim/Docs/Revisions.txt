@@ -1,0 +1,49 @@
+Revisions file for SPEC CPUv8
+
+Version 0.4.0 - 5 May 2020
+=============
+   1) Tools:
+      - Added support for non-preprocessed .f95 files (but don't do that)
+      - Added benchlang validation for benchmark sources (#7)
+      - Fixed early verbose logging output (#22)
+      - Got rid of $::current_runcpu references (#3)
+      - Fixed infinite loop on misconfigured benchmark workload dirs (#5)
+      - Widened install time estimate for Windows (#19)
+      - Try to leave Windows install with SPEC, etc set properly (#21)
+   2) Docs:
+      - Added SPEC beta license (#23)
+
+Version 0.3.0 - 20 April 2020
+=============
+   1) Tools:
+      - Added release tagging tool to bin/scripts.misc
+   2) Docs:
+      - Updated SPEC general license PDF; removed plaintext version
+      - Added top-level LICENSE.txt with license pointers
+      - Added top-level README.txt with basic instructions
+   3) Example configs:
+      - Example-aocc-linux-x86.cfg: Updated from -std=c++03 to -std=c++11
+      - Example-gcc-linux-aarch64.cfg: Updated from -std=c++03 to -std=c++11
+      - Example-gcc-linux-ppc64le.cfg: Updated from -std=c++03 to -std=c++11
+      - Example-gcc-linux-x86.cfg: Updated from -std=c++03 to -std=c++11
+      - Example-gcc-macosx.cfg: Updated from -std=c++03 to -std=c++11
+
+Version 0.2.0 - 14 April 2020
+=============
+   1) Tools
+      - Fixed sorting of hash keys in debug log data structure dumps
+      - Disabled integrity checks for dev releases unless SPEC_CHECK is set (#4)
+      - Fixed bogus exe target determination that broke some builds (#6)
+      - Fixed storage of compiler version information (#14)
+      - Made installers abort in converted-to-development tree (#9)
+
+Version 0.1.0 - 3 December 2019
+=============
+   1) Tools
+      - Imported from CPU2017 v1.1.0
+   2) Docs
+      - Imported from CPU2017 v1.1.0
+   3) 998.specrand_s: Added
+   4) 999.specrand_r: Added
+
+------------------------------------------------------------------------------

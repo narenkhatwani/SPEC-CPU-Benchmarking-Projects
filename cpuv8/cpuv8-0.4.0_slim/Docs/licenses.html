@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+      <title>Licenses - CPUv8</title>
+      <!-- You'll want a nice wide screen (132 columns) when editing this ............................................................ -->
+
+      <link rel="STYLESHEET" href="css/cpudocs.css" type="text/css" />
+      <style type="text/css">
+table.license {width:900px;margin-left:2em;}
+table.license th    {font-family:sans-serif; font-weight:bold; }
+table.license tr    {padding-top:22px;}
+td.src {font-family:monospace; }
+      </style>
+      </head>
+      <body>
+
+      <h1>SPEC CPU&reg;v8 Licenses </h1>
+      <table class="version">
+         <tr>
+            <td>Latest: <a href="https://www.spec.org/cpuv8/Docs/">www.spec.org/cpuv8/Docs/</a></td>
+         </tr>
+      </table>
+
+      <p class="contents">Contents</p>
+      <p class="contentsl2"><a href="#SPEClicense">Introduction to the SPEC CPUv8 License Agreement</a></p>
+      <p class="contentsl2"><a href="#free">Freely-redistributable sources </a></p>
+      <p class="contentsl3"><a href="#GPLtarballs">Note 1:</a> Licenses and bug reporting</p>
+      <p class="contentsl3"><a href="#BSD">Note 2:</a> about "BSD" licenses</p>
+      <p class="contentsl2"><a href="#benchmarks">Benchmarks</a></p>
+      <p class="contentsl2last"><a href="#tools">SPEC CPUv8 Tools</a></p>
+
+
+
+      <h2 id="SPEClicense">Introduction to the SPEC CPU&reg;v8 License Agreement</h2>
+
+      <p class="l1">SPEC CPU&reg;v8 is a product of the SPEC&reg; non-profit corporation 
+      <a href="https://www.spec.org/spec/" class="external">(about SPEC)</a>.  The SPEC CPUv8 source code and tools are
+      provided under a
+      <a href="https://www.spec.org/cpuv8/Docs/licenses/SPEC-License.pdf">SPEC License Agreement</a><span
+         style="font-size:85%;">(pdf format; plain text is also  <a
+         href="https://www.spec.org/cpuv8/Docs/licenses/SPEC-License.txt">available</a>)</span>
+      The license contains the terms and conditions of your agreement with SPEC.  Read it carefully before using the
+      product.  A copy is also on your distribution media, in the <samp class="snugr">Docs/licenses/</samp> directory.</p>
+
+      <p class="l1snugbot">The following points are not a substitute for that License Agreement, but may be helpful as an
+      introduction:</p>
+      <ul class="l1snugish">
+         <li>If your corporation buys SPEC CPUv8, you may share it within your corporation.</li>
+         <li>Don't send it elsewhere.</li>
+         <li>Don't post it to the public.</li>
+         <li>Use it only for benchmarking.</li>
+         <li><p class="snug">Public use is governed by:</p>
+         <ul class="snugish">
+            <li>The SPEC-wide Fair Use Rule
+            <a href="https://www.spec.org/fairuse.html">www.spec.org/fairuse.html</a> and</li>
+            <li>The SPEC CPUv8 rules
+            <a href="https://www.spec.org/cpuv8/Docs/runrules.html">www.spec.org/cpuv8/Docs/runrules.html</a></li>
+         </ul>
+         </li>
+         <li>Freely-redistributable source components included within SPEC CPUv8 are licensed separately, and
+         remain freely redistributable.</li>
+      </ul>
+
+
+      <h2 id="free">Freely-redistributable sources </h2>
+
+      <div class="l1">
+         <p>SPEC gratefully acknowledges the many free and open source software contributions that are used in SPEC CPUv8. </p>
+         <ul>
+            <li>The directory <samp>redistributable_sources/original</samp> contains archives of original sources that were
+               used.</li>
+            <li>The directory <samp>redistributable_sources/modified</samp> contains archives of sources as modified by
+               SPEC.</li>
+            <li>The directory <samp>Docs/licenses</samp> contains copies of the license documents for both SPEC and for
+               redistributable sources.</li>
+            <li>The file <samp>Docs/licenses.html</samp> (which you are reading now) identifies which licenses apply to which
+               source components, as used by <a href="#benchmarks">benchmarks</a> and by the SPEC <a href="#tools">CPUv8 tool
+                  set</a>.</li>
+         </ul>
+
+         <h3 id="GPLtarballs">Note 1: Licenses and bug reporting</h3>
+         <div class="l1">
+            <p>In the table below, several benchmarks are marked as using the GNU GPL.  For each, SPEC's updated sources are
+            available in the ISO image for your copy of SPEC CPUv8, in a compressed tar file underneath
+            <samp class="snugr">redistributable_sources/modified</samp>.</p>
+
+            <p>One possible use for modified sources is for bug reporting.  If you wish to
+            provide an entire benchmark to a compiler developer, generally you are not allowed to do so, unless the developer
+            also has a license for SPEC CPUv8.  The exception is for the GPL benchmarks: for those, you may, if you
+            wish to do so, pass along the tarball from
+            <samp class="snugr">redistributable_sources/modified</samp>.  In that situation, please note that:</p>
+
+            <ul class="l1snugtop">
+               <li>The benchmark inputs are generally not redistributable, unless marked otherwise.</li>
+               <li>SPEC's validator and SPEC's expected answers are not redistributable.</li>
+               <li>SPEC's benchmark setup and reporting harness are not redistributable.</li>
+               <li>Included within each tarball in <samp>redistributable_sources/modified</samp> is script
+                  <samp class="nbsnugr">simple-build&lt;<i>name</i>&gt;.sh</samp>, which creates a binary using gcc/g++/gfortran on
+                  Linux/x86.  Of course, to report a bug with some other compiler, you will need to modify the example.</li>
+            </ul>
+
+         </div>
+
+
+         <h3 id="BSD">Note 2: about "BSD" licenses</h3>
+         <div class="l1">
+            <p>SPEC tried to track down all software license references within all files in SPEC CPUv8.  Many modules were found with
+            <a href="licenses/BSD.txt">BSD</a> (or similar) licenses.  Copyrights for such modules must be acknowledged in the documentation if they
+            are shipped in binary form.  Separate acknowledgment is not required if they ship as source code (which is how
+            SPEC CPUv8 ships).</p>
+
+            <p>Nevertheless, having identified these modules, it seems only courteous to acknowledge them -- even if not legally
+            required.  Most are acknowledged in this document, with the exception of BSD contributions to 526.blender, which are in an <a
+               href="blender-appendix.html">Appendix</a>, because there are so many.</p>
+
+            <p>When considering BSD licenses, one should be careful not to confuse "acknowledgment" with "advertising".  To
+            the best of SPEC's knowledge, no BSD-licensed materials in SPEC CPUv8 require advertisement.  (Only one source
+            file in SPEC CPUv8 mentions such a clause, and that file is copyright by Berkeley, who have
+            <a href="licenses/BSD-Change-1999.txt">explicitly disclaimed</a> the requirement.)</p>
+         </div>
+
+      </div>
+
+
+      <h2 id="benchmarks">
+         <span id="Benchmarks"> </span>
+         Benchmarks</h2>
+
+      <p>The table lists redistributable sources used by benchmarks, and the license or licenses that apply to them.  </p>
+
+      <table class="license" id="BenchmarkLicenses">
+         <tr>
+            <th>Benchmark</th>
+            <th>Archive name</th>
+            <th>License(s)</th>
+         </tr>
+
+         <!-- .................................................................................................... -->
+         <tr>
+            <td rowspan="1"><span id="bmk998.specrand_s"><a href="benchmarks/998.specrand_s"><a href="benchmarks/998.specrand_s.html">998.specrand_s</a></span><br />
+               <span id="bmk999.specrand_r"><a href="benchmarks/999.specrand_r.html">999.specrand_r</a></span></td>
+            <td class="src"> mt19937ar.sep.tgz <a href="#mt">[description]</a>  </td>
+            <td><a href="licenses/BSD.txt">BSD</a> License</td>
+         </tr>
+
+
+
+      </table>
+
+
+<h2 id="tools">SPEC CPUv8 Tools</h2>
+
+<p>The following table lists the tools components, their associated archive
+or archives, as well as the license or licenses that apply to them:</p>
+
+      <table class="license">
+         <tr>
+            <th>Archive name</th>
+            <th>License(s)</th>
+         </tr>
+
+         <tr><td class="src">  perl-5.24.0.tar.xz               </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  Algorithm-Diff-1.1903.tar.gz     </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  Core14_AFMs.tar.xz  <a href="#invisible">[Core14 Notes]</a></td>
+                                                                 <td><a href="licenses/Adobe-Core14-AFM.txt">Adobe Core 14 license</a> </td></tr>
+
+         <tr><td class="src">  Exporter-Tiny-0.042.tar.gz       </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  File-NFSLock-1.27.tar.gz         </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  Font-AFM-1.20.tar.gz             </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src" rowspan="2">  Font-TTF-1.05.tar.gz </td><td><a href="licenses/Artistic.txt">Perl Artistic License, v2</a></td></tr>
+         <tr>                                                        <td>Test suite fonts: <a href="licenses/OFL.v1.1.txt">SIL Open Font License v1.1</a></td></tr>
+         <tr><td class="src">  HTML-Parser-3.71.tar.gz          </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  IO-String-1.08.tar.gz            </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  IO-stringy-2.111.tar.gz          </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  List-MoreUtils-0.416.tar.gz      </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  MIME-tools-5.507.tar.gz          </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  MailTools-2.14.tar.gz            </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  PDF-API2-2.025.tar.gz            </td><td><a href="licenses/LGPL.v2.1.txt">GNU LGPL, version 2.1</a></td></tr>
+         <tr><td class="src">  SVG-2.64.tar.gz                  </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  String-ShellQuote-1.04.tar.gz    </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  Test-Deep-0.119.tar.gz           </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  Text-CSV_XS-1.20.tgz             </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  TimeDate-2.30.tar.gz             </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  URI-1.69.tar.gz                  </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  XML-NamespaceSupport-1.11.tar.gz </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  XML-SAX-0.99.tar.gz              </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  XML-SAX-Base-1.08.tar.gz         </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  XML-SAX-ExpatXS-1.33.tar.gz      </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  XSLoader-0.22.tar.gz             </td><td><a href="licenses/Artistic.txt">Perl Artistic License</a></td></tr>
+         <tr><td class="src">  coreutils-8.24.tar.xz            </td><td><a href="licenses/GPL.v3.txt">GNU GPL, version 3</a> or later</td></tr>
+         <tr><td class="src">  expat-2.1.0.tar.gz               </td><td><a href="licenses/MIT.txt">MIT License</a></td></tr>
+         <tr><td class="src">  filepp-1.8.0.tar.gz              </td><td><a href="licenses/GPL.v2.txt">GNU GPL, version 2</a> or later</td></tr>
+         <tr><td class="src">  make-4.2.1.tar.bz2               </td><td><a href="licenses/GPL.v3.txt">GNU GPL, version 3</a> or later</td></tr>
+         <tr><td class="src">  makedepf90-2.8.8.tar.gz          </td><td><a href="licenses/GPL.v2.txt">GNU GPL, version 2</a></td></tr>
+         <tr><td class="src">  Parts of SPEC PTD                </td><td><a href="licenses/PTD-FreeAndOpenSourceSoftware.txt">Public Domain / BSD</a></td></tr>
+         <tr><td class="src" rowspan="4">  rxp-1.5.0.tar.gz <a href="#rxpnotes">[RXP notes]</a></td>
+                                                                     <td><a href="licenses/GPL.U-Edinburgh.txt">University of Edinburgh GPL</a></td></tr>
+         <tr>                                                        <td><a href="licenses/W3C.txt">W3C software license</a></td></tr>
+         <tr>                                                        <td><a href="licenses/Unicode.txt">Unicode Character Database terms</a></td></tr>
+         <tr>                                                        <td><a href="licenses/OASIS.txt">OASIS XML Catalog copyright</a></td></tr>
+         <tr><td class="src">  tar-1.28.tar.xz                  </td><td><a href="licenses/GPL.v3.txt">GNU GPL, version 3</a> or later</td></tr>
+         <tr><td class="src" rowspan="2">  xz-5.2.2.tar.xz      </td><td>Public Domain: <a href="licenses/XZ-Utils.txt">XZ Utils license</a></td></tr>
+         <tr>                                                        <td><a href="licenses/LGPL.v2.1.txt">GNU LGPL, version 2.1</a></td></tr>
+         <tr><td class="src">  zsh.zip                          </td><td>Free use; see <a href="licenses/zsh.txt">ZSH license</a></td></tr>
+      </table>
+
+
+      <div style="width:700px;">
+         <p id="invisible" class="snugbot"><b>Adobe Core 14 Notes</b></p>
+         <p class="l1snugish">The text version of the Adobe Font Metrics license has been modified
+         to include only the visible content from the original </p>
+         <pre class="l3snug">MustRead.html</pre>
+         <p class="l1snugtop">The modifications, although invisible, are nevertheless prominently
+         noted,  as is <a href="licenses/Adobe-Core14-AFM.txt">required</a>.
+         <br />A pointer is also included to the unmodified original.
+         <br /><span style="font-size:80%;">(One cannot help but wonder if the inclusion of invisible ink was a little test?)</span></p>
+
+         <p id="rxpnotes" class="snugbot"><b>RXP notes</b></p>
+
+         <ul class="l1snugtop">
+            <li>The files nf16check.c, nf16check.h, nf16data.c, and nf16data.h
+               in RXP are covered under the <a href="licenses/W3C.txt">W3C Software Notice and License</a>.</li>
+            <li> The contents of nf16data.c in RXP are derived from the Unicode
+               Character Database files.  Those files are not included in
+               the RXP distribution, but we include a copy of the
+               <a href="licenses/Unicode.txt">Unicode Terms
+                  of Use</a>.</li>
+            <li>The contents of <samp>catalog_dtd.c</samp> in RXP are derived from the XML
+               Catalog DTD specification.  See the <a href="licenses/OASIS.txt">OASIS_XML Catalog copyright</a>.</li>
+         </ul>
+
+      </div>
+
+<p style="border-top:thin solid black;">
+SPEC CPU&reg;v8 Licenses:
+Copyright&nbsp;&copy;&nbsp;2019 Standard Performance Evaluation Corporation (SPEC&reg;)</p>
+<!-- this space intentionally left blank: some empty space at the bottom increases the probability that clicking on a link in
+   the table of contents will actually position the desired section at the top of your browser window -->
+<p style="margin:300px 1em;">&nbsp;</p>
+
+
+   </body>
+</html>

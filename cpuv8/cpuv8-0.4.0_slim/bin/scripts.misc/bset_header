@@ -1,0 +1,13 @@
+# This file contains a list of the benchmarks written in
+# XXXLANGSXXX.
+# It is automatically generated.
+
+$name        = 'XXXBSETNAMEXXX';
+$unitbase    = 'NOTAnyKindOfCPUmark';
+$metricbase  = 'some_or_none';
+$metric      = 'CPUv8';
+$ref         = 'ref';
+$train       = 'train';
+$test        = 'test';
+$output      = 0;
+@benchmarks = qw(

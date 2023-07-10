@@ -1,0 +1,202 @@
+--------------------------------------------------------------------------
+  W A R N I N G      W A R N I N G      W A R N I N G      W A R N I N G
+--------------------------------------------------------------------------
+The following text file was automatically generated from a document that
+you really should read in HTML format.  This text document is only a poor
+fallback if you cannot read HTML, and using it is NOT RECOMMENDED.
+
+To read this document in the recommended way, point your favorite web
+browser at one of these 3 places:
+(1) The SPEC site https://www.spec.org/cpuv8/Docs/
+(2) The Docs directory from the original CPUv8 ISO image
+(3) The Docs directory on the system where you have installed
+    your SPEC CPUv8 tree - for example:
+    /spec/cpuv8/Docs/ (Unix) or D:\spec\cpuv8\Docs\ (Windows)
+--------------------------------------------------------------------------
+  W A R N I N G      W A R N I N G      W A R N I N G      W A R N I N G
+--------------------------------------------------------------------------
+
+                             SPEC CPU(R)v8 Licenses
+
+   Latest: www.spec.org/cpuv8/Docs/
+
+   Contents
+
+   Introduction to the SPEC CPUv8 License Agreement
+
+   Freely-redistributable sources
+
+   Note 1: Licenses and bug reporting
+
+   Note 2: about "BSD" licenses
+
+   Benchmarks
+
+   SPEC CPUv8 Tools
+
+Introduction to the SPEC CPU(R)v8 License Agreement
+
+   SPEC CPU(R)v8 is a product of the SPEC(R) non-profit corporation (about
+   SPEC). The SPEC CPUv8 source code and tools are provided under a SPEC
+   License Agreement(pdf format; plain text is also available) The license
+   contains the terms and conditions of your agreement with SPEC. Read it
+   carefully before using the product. A copy is also on your distribution
+   media, in the Docs/licenses/ directory.
+
+   The following points are not a substitute for that License Agreement, but
+   may be helpful as an introduction:
+
+     * If your corporation buys SPEC CPUv8, you may share it within your
+       corporation.
+     * Don't send it elsewhere.
+     * Don't post it to the public.
+     * Use it only for benchmarking.
+     * Public use is governed by:
+
+          * The SPEC-wide Fair Use Rule www.spec.org/fairuse.html and
+          * The SPEC CPUv8 rules www.spec.org/cpuv8/Docs/runrules.html
+
+     * Freely-redistributable source components included within SPEC CPUv8
+       are licensed separately, and remain freely redistributable.
+
+Freely-redistributable sources
+
+   SPEC gratefully acknowledges the many free and open source software
+   contributions that are used in SPEC CPUv8.
+
+     * The directory redistributable_sources/original contains archives of
+       original sources that were used.
+     * The directory redistributable_sources/modified contains archives of
+       sources as modified by SPEC.
+     * The directory Docs/licenses contains copies of the license documents
+       for both SPEC and for redistributable sources.
+     * The file Docs/licenses.html (which you are reading now) identifies
+       which licenses apply to which source components, as used by benchmarks
+       and by the SPEC CPUv8 tool set.
+
+  Note 1: Licenses and bug reporting
+
+   In the table below, several benchmarks are marked as using the GNU GPL.
+   For each, SPEC's updated sources are available in the ISO image for your
+   copy of SPEC CPUv8, in a compressed tar file underneath
+   redistributable_sources/modified.
+
+   One possible use for modified sources is for bug reporting. If you wish to
+   provide an entire benchmark to a compiler developer, generally you are not
+   allowed to do so, unless the developer also has a license for SPEC CPUv8.
+   The exception is for the GPL benchmarks: for those, you may, if you wish
+   to do so, pass along the tarball from redistributable_sources/modified. In
+   that situation, please note that:
+
+     * The benchmark inputs are generally not redistributable, unless marked
+       otherwise.
+     * SPEC's validator and SPEC's expected answers are not redistributable.
+     * SPEC's benchmark setup and reporting harness are not redistributable.
+     * Included within each tarball in redistributable_sources/modified is
+       script simple-build<name>.sh, which creates a binary using
+       gcc/g++/gfortran on Linux/x86. Of course, to report a bug with some
+       other compiler, you will need to modify the example.
+
+  Note 2: about "BSD" licenses
+
+   SPEC tried to track down all software license references within all files
+   in SPEC CPUv8. Many modules were found with BSD (or similar) licenses.
+   Copyrights for such modules must be acknowledged in the documentation if
+   they are shipped in binary form. Separate acknowledgment is not required
+   if they ship as source code (which is how SPEC CPUv8 ships).
+
+   Nevertheless, having identified these modules, it seems only courteous to
+   acknowledge them -- even if not legally required. Most are acknowledged in
+   this document, with the exception of BSD contributions to 526.blender,
+   which are in an Appendix, because there are so many.
+
+   When considering BSD licenses, one should be careful not to confuse
+   "acknowledgment" with "advertising". To the best of SPEC's knowledge, no
+   BSD-licensed materials in SPEC CPUv8 require advertisement. (Only one
+   source file in SPEC CPUv8 mentions such a clause, and that file is
+   copyright by Berkeley, who have explicitly disclaimed the requirement.)
+
+Benchmarks
+
+   The table lists redistributable sources used by benchmarks, and the
+   license or licenses that apply to them.
+
+     Benchmark             Archive name           License(s)
+   998.specrand_s mt19937ar.sep.tgz [description] BSD License
+   999.specrand_r
+
+SPEC CPUv8 Tools
+
+   The following table lists the tools components, their associated archive
+   or archives, as well as the license or licenses that apply to them:
+
+             Archive name                           License(s)
+   perl-5.24.0.tar.xz                Perl Artistic License
+   Algorithm-Diff-1.1903.tar.gz      Perl Artistic License
+   Core14_AFMs.tar.xz [Core14 Notes] Adobe Core 14 license
+   Exporter-Tiny-0.042.tar.gz        Perl Artistic License
+   File-NFSLock-1.27.tar.gz          Perl Artistic License
+   Font-AFM-1.20.tar.gz              Perl Artistic License
+                                     Perl Artistic License, v2
+   Font-TTF-1.05.tar.gz              Test suite fonts: SIL Open Font License
+                                     v1.1
+   HTML-Parser-3.71.tar.gz           Perl Artistic License
+   IO-String-1.08.tar.gz             Perl Artistic License
+   IO-stringy-2.111.tar.gz           Perl Artistic License
+   List-MoreUtils-0.416.tar.gz       Perl Artistic License
+   MIME-tools-5.507.tar.gz           Perl Artistic License
+   MailTools-2.14.tar.gz             Perl Artistic License
+   PDF-API2-2.025.tar.gz             GNU LGPL, version 2.1
+   SVG-2.64.tar.gz                   Perl Artistic License
+   String-ShellQuote-1.04.tar.gz     Perl Artistic License
+   Test-Deep-0.119.tar.gz            Perl Artistic License
+   Text-CSV_XS-1.20.tgz              Perl Artistic License
+   TimeDate-2.30.tar.gz              Perl Artistic License
+   URI-1.69.tar.gz                   Perl Artistic License
+   XML-NamespaceSupport-1.11.tar.gz  Perl Artistic License
+   XML-SAX-0.99.tar.gz               Perl Artistic License
+   XML-SAX-Base-1.08.tar.gz          Perl Artistic License
+   XML-SAX-ExpatXS-1.33.tar.gz       Perl Artistic License
+   XSLoader-0.22.tar.gz              Perl Artistic License
+   coreutils-8.24.tar.xz             GNU GPL, version 3 or later
+   expat-2.1.0.tar.gz                MIT License
+   filepp-1.8.0.tar.gz               GNU GPL, version 2 or later
+   make-4.2.1.tar.bz2                GNU GPL, version 3 or later
+   makedepf90-2.8.8.tar.gz           GNU GPL, version 2
+   Parts of SPEC PTD                 Public Domain / BSD
+                                     University of Edinburgh GPL
+   rxp-1.5.0.tar.gz [RXP notes]      W3C software license
+                                     Unicode Character Database terms
+                                     OASIS XML Catalog copyright
+   tar-1.28.tar.xz                   GNU GPL, version 3 or later
+   xz-5.2.2.tar.xz                   Public Domain: XZ Utils license
+                                     GNU LGPL, version 2.1
+   zsh.zip                           Free use; see ZSH license
+
+   Adobe Core 14 Notes
+
+   The text version of the Adobe Font Metrics license has been modified to
+   include only the visible content from the original
+
+ MustRead.html
+
+   The modifications, although invisible, are nevertheless prominently noted,
+   as is required.
+   A pointer is also included to the unmodified original.
+   (One cannot help but wonder if the inclusion of invisible ink was a little
+   test?)
+
+   RXP notes
+
+     * The files nf16check.c, nf16check.h, nf16data.c, and nf16data.h in RXP
+       are covered under the W3C Software Notice and License.
+     * The contents of nf16data.c in RXP are derived from the Unicode
+       Character Database files. Those files are not included in the RXP
+       distribution, but we include a copy of the Unicode Terms of Use.
+     * The contents of catalog_dtd.c in RXP are derived from the XML Catalog
+       DTD specification. See the OASIS_XML Catalog copyright.
+
+   SPEC CPU(R)v8 Licenses: Copyright (c) 2019 Standard Performance Evaluation
+   Corporation (SPEC(R))
+
+

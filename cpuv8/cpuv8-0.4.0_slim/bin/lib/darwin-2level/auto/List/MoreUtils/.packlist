@@ -1,0 +1,9 @@
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/List/MoreUtils.pm relocate_as=../../../List/MoreUtils.pm
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/List/MoreUtils/Contributing.pod relocate_as=../../../List/MoreUtils/Contributing.pod
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/List/MoreUtils/PP.pm relocate_as=../../../List/MoreUtils/PP.pm
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/List/MoreUtils/XS.pm relocate_as=../../../List/MoreUtils/XS.pm
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/lib/perl5/site_perl/5.24.0/darwin-2level/auto/List/MoreUtils/MoreUtils.bundle relocate_as=MoreUtils.bundle
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/man/man3/List::MoreUtils.3 relocate_as=../../../../../../../../man/man3/List::MoreUtils.3
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/man/man3/List::MoreUtils::Contributing.3 relocate_as=../../../../../../../../man/man3/List::MoreUtils::Contributing.3
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/man/man3/List::MoreUtils::PP.3 relocate_as=../../../../../../../../man/man3/List::MoreUtils::PP.3
+/Users/cloyce/work/CPU2017/cpu2017/tools/output/man/man3/List::MoreUtils::XS.3 relocate_as=../../../../../../../../man/man3/List::MoreUtils::XS.3

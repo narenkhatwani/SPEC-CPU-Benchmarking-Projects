@@ -1,0 +1,13 @@
+$name        = 'serial';
+$unitbase    = 'NOTAnyKindOfCPUmark';
+$metricbase  = 'int_and_fp';
+$metric      = 'CPUv8';
+$ref         = 'refrate';
+$train       = 'train';
+$test        = 'test';
+$output      = 0;
+@benchmarks = qw(
+        999.specrand_r
+);
+
+1;

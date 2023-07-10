@@ -1,0 +1,16 @@
+$name             = 'specrate';
+$unitbase         = 'SPEC';
+$metricbase       = 'int_and_fp';
+$metric           = 'CPUv8';
+$ref              = 'refrate';
+$train            = 'train';
+$test             = 'test';
+$rate_multiplier  = 1;
+$speed_multiplier = 0;   # Disallow speed runs with this benchset
+$output           = 1;
+@benchmarks = qw(
+        999.specrand_r
+        788.prime_r
+);
+
+1;

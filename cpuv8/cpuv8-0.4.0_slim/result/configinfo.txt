@@ -1,0 +1,65 @@
+Narens-MacBook-Pro.local
+Sat Jun 17 23:46:32 EDT 2023
+
+PATH=/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin:/Users/narenkhatwani/anaconda3/bin:/Users/narenkhatwani/anaconda3/condabin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+LD_LIBRARY_PATH=:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib32:
+
+LIBRARY_PATH=:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib32:
+
+
+***** clang -v *****
+
+clang version 14.0.6
+Target: arm64-apple-darwin22.4.0
+Thread model: posix
+InstalledDir: /Users/narenkhatwani/anaconda3/bin
+
+***** clang++ -v *****
+
+clang version 14.0.6
+Target: arm64-apple-darwin22.4.0
+Thread model: posix
+InstalledDir: /Users/narenkhatwani/anaconda3/bin
+
+***** gfortran -v *****
+
+Using built-in specs.
+COLLECT_GCC=gfortran
+COLLECT_LTO_WRAPPER=/Users/narenkhatwani/anaconda3/libexec/gcc/arm64-apple-darwin20.0.0/11.0.1/lto-wrapper
+Target: arm64-apple-darwin20.0.0
+Configured with: ../configure --prefix=/Users/narenkhatwani/anaconda3 --build=x86_64-apple-darwin13.4.0 --host=arm64-apple-darwin20.0.0 --target=arm64-apple-darwin20.0.0 --with-libiconv-prefix=/Users/narenkhatwani/anaconda3 --enable-languages=fortran --disable-multilib --enable-checking=release --disable-bootstrap --disable-libssp --with-gmp=/Users/narenkhatwani/anaconda3 --with-mpfr=/Users/narenkhatwani/anaconda3 --with-mpc=/Users/narenkhatwani/anaconda3 --with-isl=/Users/narenkhatwani/anaconda3
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.0.1 20210403 (experimental) (GCC) 
+
+cat: /proc/meminfo: No such file or directory
+cat: /sys/devices/system/node/node*/meminfo: No such file or directory
+
+
+./get-system-info.sh: line 32: dmidecode: command not found
+
+cat: /etc/*elease: No such file or directory
+Darwin Narens-MacBook-Pro.local 22.4.0 Darwin Kernel Version 22.4.0: Mon Mar  6 20:59:58 PST 2023; root:xnu-8796.101.5~3/RELEASE_ARM64_T6020 arm64
+Filesystem       Size   Used  Avail Capacity iused      ifree %iused  Mounted on
+/dev/disk3s1s1   494G    12G   233G     5%  356093 2275306000    0%   /
+devfs            203k   203k     0B   100%     688          0  100%   /dev
+/dev/disk3s6     494G    12G   233G     5%      11 2275306000    0%   /System/Volumes/VM
+/dev/disk3s2     494G   9.8G   233G     5%    1127 2275306000    0%   /System/Volumes/Preboot
+/dev/disk3s4     494G   616M   233G     1%     302 2275306000    0%   /System/Volumes/Update
+/dev/disk1s2     524M   6.3M   504M     2%       1    4922520    0%   /System/Volumes/xarts
+/dev/disk1s1     524M   6.5M   504M     2%      32    4922520    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     524M   2.4M   504M     1%      66    4922520    0%   /System/Volumes/Hardware
+/dev/disk3s5     494G   226G   233G    50% 2406550 2275306000    0%   /System/Volumes/Data
+map auto_home      0B     0B     0B   100%       0          0  100%   /System/Volumes/Data/home
+/dev/disk2s1     5.4G   1.6G   3.8G    30%      62   37024600    0%   /System/Volumes/Update/SFR/mnt1
+/dev/disk3s1     494G    12G   233G     5%  355386 2275306000    0%   /System/Volumes/Update/mnt1
+
+
+***** which gfortran *****
+
+/Users/narenkhatwani/anaconda3/bin/gfortran
+
+***** which gcc *****
+
+/usr/bin/gcc

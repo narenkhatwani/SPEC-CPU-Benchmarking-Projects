@@ -1,0 +1,118 @@
+runcpu (f5b6d690) started at 2023-06-17 23:46:33 on "Narens-MacBook-Pro.local"
+runcpu is: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu
+runcpu: runcpu --action=build --rebuild --config my_project.cfg --ignore_errors --tune all 788
+toolset: macosx-x86
+suite: CPUv8 0.4.0_slimdev
+
+Locating benchmarks...found 3 benchmarks in 4 benchsets.
+Reading config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_flags.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc'
+Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc'
+
+1 configuration selected:
+
+Action   Benchmarks
+------   ----------------------------------------------------------------------
+build    788.prime_r                                                           
+-------------------------------------------------------------------------------
+
+Setting up environment for running 788.prime_r...
+Starting runcpu for 788.prime_r...
+Running "specperl /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/sysinfo" to gather system information.
+sysinfo: sysinfo c290f470546e9dbf0f70718c55966828
+sysinfo: Getting system information for MacOS X...
+sysinfo: ...getting system info from system profiler
+sysinfo: ...getting system info from sysctl
+sysinfo: ...getting disk info
+Retrieving flags file (/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml)...
+Verbosity = 5
+Action    = build
+Tune      = base,peak
+Label     = my_project
+Size      = test,train,refrate
+benchmarks= 788.prime_r
+outputs   = all
+username  = narenkhatwani
+Environment settings:
+LD_LIBRARY_PATH = "/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/%{lib_dir}/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/%{lib_dir}/lib32:%{ENV_LD_LIBRARY_PATH}"
+MALLOC_CONF = "retain:true"
+
+Benchmarks selected: 788.prime_r
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+Compiling Binaries
+------------------------------------------------------------------------
+  Building 788.prime_r base my_project: (build_base_my_project.0000) [2023-06-17 23:46:36]
+  Compile for '788.prime_r' started at: 2023-06-17 23:46:36 (1687059996)
+Issuing make.clean command 'specmake --output-sync --jobs=64 --load-average=64 clean'
+specmake --output-sync --jobs=64 --load-average=64 clean
+Start make.clean command: 2023-06-17 23:46:36 (1687059996.05434)
+rm -rf *.o  prime_numbers.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf prime_r
+rm -rf prime_r.exe
+rm -rf core
+Stop make.clean command: 2023-06-17 23:46:36 (1687059996.29004)
+Elapsed time for make.clean command: 00:00:00 (0.235698938369751)
+Issuing make command 'specmake --output-sync --jobs=64 --load-average=64 build'
+specmake --output-sync --jobs=64 --load-average=64 build
+Start make command: 2023-06-17 23:46:36 (1687059996.29325)
+g++ -m64 -std=c++17 -c -o prime.o -DSPEC -DNDEBUG    -O2 -march=znver3 -flto   -fopenmp  -std=c++03 -fpermissive   -DSPEC_LP64  prime.cpp
+clang: error: unsupported option '-fopenmp'
+specmake: *** [/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/Makefile.defaults:365: prime.o] Error 1
+Stop make command: 2023-06-17 23:47:08 (1687060028.76205)
+Elapsed time for make command: 00:00:32 (32.4688000679016)
+Error with make 'specmake --output-sync --jobs=64 --load-average=64 build':
+  ----------------------------------------------------------------------------
+  Please review this file:
+    "/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_base_my_project.0000/make.out"
+  ----------------------------------------------------------------------------
+  Command returned exit code 2
+  Error with make!
+  Compile for '788.prime_r' ended at: 2023-06-17 23:47:08 (1687060028)
+  Elapsed compile for '788.prime_r': 00:00:32 (32)
+*** Error building 788.prime_r base
+------------------------------------------------------------------------
+  Building 788.prime_r peak my_project: (build_peak_my_project.0000) [2023-06-17 23:47:08]
+  Compile for '788.prime_r' started at: 2023-06-17 23:47:08 (1687060028)
+Issuing make.clean command 'specmake --output-sync --jobs=64 --load-average=64 clean'
+specmake --output-sync --jobs=64 --load-average=64 clean
+Start make.clean command: 2023-06-17 23:47:08 (1687060028.81108)
+rm -rf *.o  
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf prime_r
+rm -rf prime_r.exe
+rm -rf core
+Stop make.clean command: 2023-06-17 23:47:09 (1687060029.04093)
+Elapsed time for make.clean command: 00:00:00 (0.229851007461548)
+Issuing make command 'specmake --output-sync --jobs=64 --load-average=64 build'
+specmake --output-sync --jobs=64 --load-average=64 build
+Start make command: 2023-06-17 23:47:09 (1687060029.04404)
+g++ -m64 -std=c++17 -c -o prime.o -DSPEC -DNDEBUG    -Ofast -march=znver3 -flto   -fopenmp  -fpermissive   -DSPEC_LP64  prime.cpp
+clang: error: unsupported option '-fopenmp'
+specmake: *** [/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/Makefile.defaults:365: prime.o] Error 1
+Stop make command: 2023-06-17 23:47:09 (1687060029.30001)
+Elapsed time for make command: 00:00:00 (0.25597095489502)
+Error with make 'specmake --output-sync --jobs=64 --load-average=64 build':
+  ----------------------------------------------------------------------------
+  Please review this file:
+    "/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_peak_my_project.0000/make.out"
+  ----------------------------------------------------------------------------
+  Command returned exit code 2
+  Error with make!
+  Compile for '788.prime_r' ended at: 2023-06-17 23:47:09 (1687060029)
+  Elapsed compile for '788.prime_r': 00:00:01 (1)
+*** Error building 788.prime_r peak
+
+Build successes for specrate: None
+Build errors for specrate: 788.prime_r(base; CE), 788.prime_r(peak; CE)
+
+Build Complete
+runcpu finished at 2023-06-17 23:47:09; 34 total seconds elapsed
+The log for this run is in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/result/CPUv8.003.log
+
+runcpu finished at 2023-06-17 23:47:09; 36 total seconds elapsed

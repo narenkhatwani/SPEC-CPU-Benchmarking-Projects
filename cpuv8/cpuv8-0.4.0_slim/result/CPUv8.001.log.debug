@@ -1,0 +1,436 @@
+==============================================================================
+Debug log for CPUv8.  This file contains very detailed debugging
+output from the CPUv8 tools (as if "--verbose 99" had been specified) and is
+typically useful only to developers of the CPUv8 toolset.
+
+For a successful run, this debug log will be removed automatically, unless you
+specify "--keeptmp" on the command line, or "keeptmp=1" in your config file.
+
+If you file a support request with cpuv8support@spec.org, you may be
+asked to submit this file.
+------------------------------------------------------------------------------
+
+Environment variables that may have been set or changed by shrc:
+SPEC: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim
+PATH: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin:/Users/narenkhatwani/anaconda3/bin:/Users/narenkhatwani/anaconda3/condabin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+SPECPERLLIB: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin
+LD_LIBRARY_PATH: :/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib32:
+DYLD_LIBRARY_PATH: 
+LC_ALL: C
+LC_LANG: C
+SPECDB_PWD: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim
+------------------------------------------------------------------------------
+
+Runspec's verbose version output:
+                  This is the SPEC CPUv8 benchmark tools suite.
+
+Version summary:
+      CPUv8 version: 0.4.0_slim (development)
+ Benchmarks version: 0.4.0
+      Tools version: 0.4.0
+     runcpu version: 1f0adcbf
+
+Tools information:
+ Tools package installed: macosx-x86
+ File locking method: fcntl(2) (probably network-safe)
+Mode |  UID  |  GID  |   Size  |   Modification Time  | Name
+0755 | 501   | 20    | 2150716 |  2016-09-15 09:13:24 | specperl
+0755 | 501   | 20    |  287776 |  2016-09-15 09:13:24 | specmake
+0755 | 501   | 20    |   44028 |  2016-09-15 09:13:25 | specinvoke
+0755 | 501   | 20    |  312352 |  2016-09-15 09:13:24 | specrxp
+0775 | 501   | 20    |    1523 |  2020-05-05 17:15:54 | runcpu
+0775 | 501   | 20    |  177198 |  2020-05-05 17:15:54 | harness/runcpu
+0775 | 501   | 20    |    1523 |  2020-05-05 17:15:54 | specpp
+0775 | 501   | 20    |   89925 |  2020-05-05 17:15:54 | harness/specpp
+0775 | 501   | 20    |    1523 |  2020-05-05 17:15:54 | specdiff
+0775 | 501   | 20    |    9754 |  2020-05-05 17:15:54 | harness/specdiff
+0755 | 501   | 20    |  281820 |  2016-09-15 09:13:24 | specxz
+0755 | 501   | 20    |   70688 |  2016-09-15 09:13:25 | specsha512sum
+
+Version info for specperl (specperl): This is specperl 5, version 24, subversion 0 (v5.24.0) built for darwin-2level
+                                      Compiled at Sep 15 2016 05:57:01
+                                      For more detail on specperl, say 'specperl -V'
+Version info for specmake (specmake): GNU Make 4.2.1
+Version info for specinvoke (specinvoke): specinvoke r<dev> (OS implementation r<dev>)
+Version info for specrxp ($SPEC/bin/specrxp): RXP 1.5.0 Copyright Richard Tobin, LTG, HCRC, University of Edinburgh
+                                              Modified for use in SPEC benchmarks - 14 April 2011
+Version info for specpp ($SPEC/bin/specpp): specpp version 1.8.0SPEC
+Version info for specxz ($SPEC/bin/specxz): xz (XZ Utils) 5.2.2
+Version info for specsha512sum ($SPEC/bin/specsha512sum): sha512sum (specsum) 1.3
+
+==============================================================================
+
+1687059433.69: runcpu (1f0adcbf) started at 2023-06-17 23:37:13 on "Narens-MacBook-Pro.local"
+1687059433.69: runcpu is: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu
+1687059433.69: runcpu: runcpu --action=build --rebuild --config my_project.cfg --ignore_errors --tune all 788
+1687059433.69: toolset: macosx-x86
+1687059433.69: suite: CPUv8 0.4.0_slim
+
+1687059433.69(0.03s): Locating benchmarks...Created default regexp '(?:^|(?<=\s))[-/]DSPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]USPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for USPEC in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_CPU in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DNDEBUG in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]UNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for UNDEBUG in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_WINDOWS(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_WINDOWS in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_MEM_IO(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_MEM_IO in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP32(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP32 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_P64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_P64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_LP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_LP64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_SUPPRESS_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_AUTO_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_AUTO_SUPPRESS_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_NO_AUTO_BYTEORDER(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_NO_AUTO_BYTEORDER in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059433.72: Reading suite directory for 'CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059433.72:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'CPU.bset'
+1687059433.72:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'serial.bset'
+1687059433.72:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'specrate.bset'
+1687059433.72:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'specspeed.bset'
+1687059433.72:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '999.specrand_r'
+1687059433.73:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/999.specrand_r/Spec/object.pm in 0.000504017s
+
+1687059433.73: Notice: 999.specrand_r: specrand_r uses only languages (C) listed in benchlang (C)
+1687059433.73:     Instantiated Spec::Benchmark::specrand_r999 in 0.000406981s
+1687059433.73:     Finding src.alts took 0.000015974s
+1687059433.73:   Setting up specrand_r took 0.001080036s
+
+1687059433.73:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '788.prime_r'
+1687059433.73:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/Spec/object.pm in 0.000431061s
+
+1687059433.73: Notice: 788.prime_r: prime_r uses only languages (CXX) listed in benchlang (CXX)
+1687059433.73:     Instantiated Spec::Benchmark::prime_r788 in 0.000134945s
+1687059433.73:     Finding src.alts took 0.000010967s
+1687059433.73:   Setting up prime_r took 0.000698090s
+
+1687059433.73:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '998.specrand_s'
+1687059433.73:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/998.specrand_s/Spec/object.pm in 0.000200987s
+1687059433.73:     Instantiated Spec::Benchmark::specrand_s998 in 0.000091076s
+1687059433.73:     Finding src.alts took 0.000009060s
+1687059433.73:   Setting up specrand_s took 0.000411034s
+
+1687059433.73: Setting up suite took 0.008656025s
+1687059433.73: Reading suite directory for 'Makefile.defaults', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059433.73: Reading suite directory for 'flags-mandatory.xml', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059433.73: Reading suite directory for 'version.txt', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059433.73: found 3 benchmarks in 4 benchsets.
+1687059433.74: Reading config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg'
+1687059433.74: NOTICE: Expression evaluation for 'build_path' on line 32 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     '/home/work/cpuv8/kit38/'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  ''pattern match (m//)' trapped by operation mask at (eval 205) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Skipping expression evaluation for 'project_name' on line 34 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059433.74: NOTICE: Expression evaluation for 'flags_file_name' on line 36 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'gcc13-flags.xml'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "gcc13" not allowed while "strict subs" in use at (eval 207) line 1, <GEN64> line 209.
+1687059433.74: Bareword "flags" not allowed while "strict subs" in use at (eval 207) line 1, <GEN64> line 209.
+1687059433.74: Bareword "xml" not allowed while "strict subs" in use at (eval 207) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Skipping expression evaluation for 'lib_dir' on line 39 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059433.74: NOTICE: Expression evaluation for 'platform_file_name' on line 42 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'INVALID_platform_my_project.xml'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "INVALID_platform_my_project" not allowed while "strict subs" in use at (eval 209) line 1, <GEN64> line 209.
+1687059433.74: Bareword "xml" not allowed while "strict subs" in use at (eval 209) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Expression evaluation for 'inc_file_name' on line 55 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'my_project.inc'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "my_project" not allowed while "strict subs" in use at (eval 211) line 1, <GEN64> line 209.
+1687059433.74: Bareword "inc" not allowed while "strict subs" in use at (eval 211) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Expression evaluation for 'flags_inc_file_name' on line 56 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'my_project_flags.inc'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "my_project_flags" not allowed while "strict subs" in use at (eval 213) line 1, <GEN64> line 209.
+1687059433.74: Bareword "inc" not allowed while "strict subs" in use at (eval 213) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Expression evaluation for 'port_flags_inc_file_name' on line 57 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'my_project_portability_flags.inc'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "my_project_portability_flags" not allowed while "strict subs" in use at (eval 215) line 1, <GEN64> line 209.
+1687059433.74: Bareword "inc" not allowed while "strict subs" in use at (eval 215) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Expression evaluation for 'workaround_flags_inc_file_name' on line 58 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059433.74:         Expression:     'my_project_workaround_flags.inc'
+1687059433.74:         Returned value: ''
+1687059433.74:         Eval returned:  'Bareword "my_project_workaround_flags" not allowed while "strict subs" in use at (eval 217) line 1, <GEN64> line 209.
+1687059433.74: Bareword "inc" not allowed while "strict subs" in use at (eval 217) line 1, <GEN64> line 209.
+1687059433.74: '
+1687059433.74: NOTICE: Skipping expression evaluation for 'ext' on line 62 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059433.74: Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.inc'
+1687059433.74: NOTICE: Skipping expression evaluation for 'build_ncpus' on line 87 of
+1687059433.74:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059433.75: Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_flags.inc'
+1687059433.75: Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc'
+1687059433.75: ERROR: Unknown benchmark '706.stockfish_r' specified on line 12
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '743.lua_r' specified on line 16
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '745.brotli_r' specified on line 19
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '779.mdgb_r' specified on line 22
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059433.75: Reading included config file '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc'
+1687059433.75: ERROR: Unknown benchmark '721.gcc_r' specified on line 34
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '709.cactus_r' specified on line 39
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '710.omnetpp_r' specified on line 42
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059433.75: ERROR: Unknown benchmark '721.gcc_r' specified on line 112
+1687059433.75:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_flags.inc; ignoring
+
+1687059433.76:   '788.prime_r' added
+1687059433.76: 1 configuration selected:
+
+1687059433.76: Action   Benchmarks
+1687059433.76: ------   ----------------------------------------------------------------------
+1687059433.76: build    788.prime_r                                                           
+1687059433.76: -------------------------------------------------------------------------------
+1687059433.76: 
+1687059433.76: Setting up environment for running 788.prime_r...
+1687059433.76: Setting LD_LIBRARY_PATH = "/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib32::/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/my_project/lib32:"
+1687059433.76: Setting MALLOC_CONF = "retain:true"
+1687059433.76: Starting runcpu for 788.prime_r...
+1687059433.76:    /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/specperl /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu --action build --rebuild --configfile my_project.cfg --ignore_errors --tune all --noreportable --nopower --runmode rate --tune base:peak --size test:train:refrate 788.prime_r
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]USPEC(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for USPEC in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_CPU(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_CPU in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DNDEBUG in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]UNDEBUG(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for UNDEBUG in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_WINDOWS(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_WINDOWS in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_MEM_IO(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_MEM_IO in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP32(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP32 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_P64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_P64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_LP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_LP64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_ILP64(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_ILP64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_SUPPRESS_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_AUTO_SUPPRESS_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_AUTO_SUPPRESS_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_OPENMP(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_OPENMP in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Created default regexp '(?:^|(?<=\s))[-/]DSPEC_NO_AUTO_BYTEORDER(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for DSPEC_NO_AUTO_BYTEORDER in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/flags-mandatory.xml
+1687059434.28: Reading suite directory for 'CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059434.28:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'CPU.bset'
+1687059434.28:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'serial.bset'
+1687059434.28:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'specrate.bset'
+1687059434.29:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', 'specspeed.bset'
+1687059434.29:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '999.specrand_r'
+1687059434.29:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/999.specrand_r/Spec/object.pm in 0.000335932s
+
+1687059434.29: Notice: 999.specrand_r: specrand_r uses only languages (C) listed in benchlang (C)
+1687059434.29:     Instantiated Spec::Benchmark::specrand_r999 in 0.000571966s
+1687059434.29:     Finding src.alts took 0.000020027s
+1687059434.29:   Setting up specrand_r took 0.001113892s
+
+1687059434.29:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '788.prime_r'
+1687059434.29:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/Spec/object.pm in 0.000184059s
+
+1687059434.29: Notice: 788.prime_r: prime_r uses only languages (CXX) listed in benchlang (CXX)
+1687059434.29:     Instantiated Spec::Benchmark::prime_r788 in 0.000148058s
+1687059434.29:     Finding src.alts took 0.000010014s
+1687059434.29:   Setting up prime_r took 0.000461817s
+
+1687059434.29:   Reading benchmark directory for '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec', '998.specrand_s'
+1687059434.29:     Evaluated /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/998.specrand_s/Spec/object.pm in 0.000216961s
+1687059434.29:     Instantiated Spec::Benchmark::specrand_s998 in 0.000099897s
+1687059434.29:     Finding src.alts took 0.000009060s
+1687059434.29:   Setting up specrand_s took 0.000435829s
+
+1687059434.29: Setting up suite took 0.008761883s
+1687059434.29: Reading suite directory for 'Makefile.defaults', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059434.29: Reading suite directory for 'flags-mandatory.xml', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+1687059434.29: Reading suite directory for 'version.txt', '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec'
+
+1687059434.31: NOTICE: Expression evaluation for 'build_path' on line 32 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     '/home/work/cpuv8/kit38/'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  ''pattern match (m//)' trapped by operation mask at (eval 204) line 1, <GEN61> line 209.
+1687059434.31: '
+1687059434.31: NOTICE: Skipping expression evaluation for 'project_name' on line 34 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059434.31: NOTICE: Expression evaluation for 'flags_file_name' on line 36 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'gcc13-flags.xml'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "gcc13" not allowed while "strict subs" in use at (eval 206) line 1.
+1687059434.31: Bareword "flags" not allowed while "strict subs" in use at (eval 206) line 1.
+1687059434.31: Bareword "xml" not allowed while "strict subs" in use at (eval 206) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Skipping expression evaluation for 'lib_dir' on line 39 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059434.31: NOTICE: Expression evaluation for 'platform_file_name' on line 42 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'INVALID_platform_my_project.xml'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "INVALID_platform_my_project" not allowed while "strict subs" in use at (eval 208) line 1.
+1687059434.31: Bareword "xml" not allowed while "strict subs" in use at (eval 208) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Expression evaluation for 'inc_file_name' on line 55 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'my_project.inc'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "my_project" not allowed while "strict subs" in use at (eval 210) line 1.
+1687059434.31: Bareword "inc" not allowed while "strict subs" in use at (eval 210) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Expression evaluation for 'flags_inc_file_name' on line 56 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'my_project_flags.inc'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "my_project_flags" not allowed while "strict subs" in use at (eval 212) line 1.
+1687059434.31: Bareword "inc" not allowed while "strict subs" in use at (eval 212) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Expression evaluation for 'port_flags_inc_file_name' on line 57 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'my_project_portability_flags.inc'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "my_project_portability_flags" not allowed while "strict subs" in use at (eval 214) line 1.
+1687059434.31: Bareword "inc" not allowed while "strict subs" in use at (eval 214) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Expression evaluation for 'workaround_flags_inc_file_name' on line 58 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg failed.
+1687059434.31:         Expression:     'my_project_workaround_flags.inc'
+1687059434.31:         Returned value: ''
+1687059434.31:         Eval returned:  'Bareword "my_project_workaround_flags" not allowed while "strict subs" in use at (eval 216) line 1.
+1687059434.31: Bareword "inc" not allowed while "strict subs" in use at (eval 216) line 1.
+1687059434.31: '
+1687059434.31: NOTICE: Skipping expression evaluation for 'ext' on line 62 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059434.31: NOTICE: Skipping expression evaluation for 'build_ncpus' on line 87 of
+1687059434.31:         /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project.cfg
+1687059434.31: ERROR: Unknown benchmark '706.stockfish_r' specified on line 12
+1687059434.31:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059434.31: ERROR: Unknown benchmark '743.lua_r' specified on line 16
+1687059434.31:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059434.31: ERROR: Unknown benchmark '745.brotli_r' specified on line 19
+1687059434.31:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059434.31: ERROR: Unknown benchmark '779.mdgb_r' specified on line 22
+1687059434.31:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_portability_flags.inc; ignoring
+1687059434.31: ERROR: Unknown benchmark '721.gcc_r' specified on line 34
+1687059434.31:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059434.32: ERROR: Unknown benchmark '709.cactus_r' specified on line 39
+1687059434.32:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059434.32: ERROR: Unknown benchmark '710.omnetpp_r' specified on line 42
+1687059434.32:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_workaround_flags.inc; ignoring
+1687059434.32: ERROR: Unknown benchmark '721.gcc_r' specified on line 112
+1687059434.32:        of /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/config/my_project_flags.inc; ignoring
+1687059434.32: Running "specperl /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/sysinfo" to gather system information.
+1687059434.43: sysinfo: sysinfo c290f470546e9dbf0f70718c55966828
+1687059434.43: sysinfo: Getting system information for MacOS X...
+1687059434.43: sysinfo: ...getting system info from system profiler
+1687059435.34: sysinfo: ...getting system info from sysctl
+1687059435.34: sysinfo: ...getting disk info
+1687059435.48: Retrieving flags file (/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml)...
+1687059435.51: Created default regexp '(?:^|(?<=\s))-D_FILE_OFFSET_BITS=64(?=\s|$)' for F-D_FILE_OFFSET_BITS:64 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-aggressive-loop-optimizations(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-aggressive-loop-optimizations in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fall-intrinsics(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fall-intrinsics in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fallow-argument-mismatch(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fallow-argument-mismatch in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fcommon(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fcommon in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fconvert=big-endian(?=\s|$)' for F-fconvert:big-endian in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-ffast-math(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-ffast-math in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-ffinite-loops(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-ffinite-loops in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-ffixed-form(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-ffixed-form in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fgnu89-inline(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fgnu89-inline in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-floop-interchange(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-floop-interchange in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-flto(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-flto in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-math-errno(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-math-errno in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fomit-frame-pointer(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fomit-frame-pointer in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fopenmp(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fopenmp in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fpermissive(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fpermissive in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fprefetch-loop-arrays(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fprefetch-loop-arrays in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fprofile-generate(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fprofile-generate in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fprofile-use(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fprofile-use in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fsigned-char(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fsigned-char in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fsigned-zeros(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fsigned-zeros in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-strict-aliasing(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-strict-aliasing in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-tree-loop-vectorize(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-tree-loop-vectorize in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-funcse(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-funcse in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-underscoring(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-underscoring in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-funroll-all-loops(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-funroll-all-loops in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-funroll-loops(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-funroll-loops in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-fno-unsafe-math-optimizations(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-fno-unsafe-math-optimizations in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.51: Created default regexp '(?:^|(?<=\s))-funsigned-char(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-funsigned-char in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-lamdlibm(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-lamdlibm in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-mavx(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-mavx in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-mfmaf(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-mfmaf in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-mrecip(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-mrecip in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-mvis3(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-mvis3 in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-Ofast(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-Ofast in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-pipe(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-pipe in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-w(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-w in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-Wall(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-Wall in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52: Created default regexp '(?:^|(?<=\s))-Wno-return-type(?:\([^\)]+\))?(?:=\S*)?(?=\s|$)' for F-Wno-return-type in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/gcc13-flags.xml
+1687059435.52:   '788.prime_r' added
+1687059435.53: Verbosity = 5
+1687059435.53: Action    = build
+1687059435.53: Tune      = base,peak
+1687059435.53: Label     = my_project
+1687059435.53: Size      = test,train,refrate
+1687059435.53: benchmarks= 788.prime_r
+1687059435.53: outputs   = all
+1687059435.53: username  = narenkhatwani
+1687059435.53: Environment settings:
+1687059435.53: LD_LIBRARY_PATH = "/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/%{lib_dir}/lib:/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/%{lib_dir}/lib32:%{ENV_LD_LIBRARY_PATH}"
+1687059435.53: MALLOC_CONF = "retain:true"
+
+1687059435.53: Benchmarks selected: 788.prime_r
+1687059435.53: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+1687059435.53: build_check('788.prime_r base my_project' (Spec::Benchmark::prime_r788=HASH(0x7f7fb8cf06e8)), check_exe=1, check_options=0) called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 309.
+1687059435.53: 	Spec::Benchmark::instance(Spec::Benchmark::prime_r788=HASH(0x7f7fb9b48448), Spec::Config=HASH(0x7f7f97eabb60), "base", "test", "my_project") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 674
+
+1687059435.53: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+1687059435.53: build_check('788.prime_r peak my_project' (Spec::Benchmark::prime_r788=HASH(0x7f7fb8ce1490)), check_exe=1, check_options=0) called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 309.
+1687059435.53: 	Spec::Benchmark::instance(Spec::Benchmark::prime_r788=HASH(0x7f7fb9b48448), Spec::Config=HASH(0x7f7f97eabb60), "peak", "test", "my_project") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 674
+
+1687059435.53: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_base.my_project does not exist
+1687059435.53: build_check('788.prime_r base my_project' (Spec::Benchmark::prime_r788=HASH(0x7f7fb8c982d0)), check_exe=1, check_options=0) called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 309.
+1687059435.53: 	Spec::Benchmark::instance(Spec::Benchmark::prime_r788=HASH(0x7f7fb9b48448), Spec::Config=HASH(0x7f7f97eabb60), "base", "test", "my_project") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 762
+
+1687059435.53: Found reftime file in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.53: Found input directory under /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.53: Found output directory under /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.53: /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/exe/prime_r_peak.my_project does not exist
+1687059435.53: build_check('788.prime_r peak my_project' (Spec::Benchmark::prime_r788=HASH(0x7f7fb8ce9a10)), check_exe=1, check_options=0) called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 309.
+1687059435.53: 	Spec::Benchmark::instance(Spec::Benchmark::prime_r788=HASH(0x7f7fb9b48448), Spec::Config=HASH(0x7f7f97eabb60), "peak", "test", "my_project") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 762
+
+1687059435.53: Found reftime file in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.53: Found input directory under /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.53: Found output directory under /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/data/test
+1687059435.54: Compiling Binaries
+1687059435.54: ------------------------------------------------------------------------
+1687059435.54:   Building 788.prime_r base my_project: (build_base_my_project.0000) [2023-06-17 23:37:15]
+1687059435.54:    Creating directory at '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_base_my_project.0000' for 788.prime_r base my_project build
+1687059435.54: ERROR: Missing reference checksum for /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/src/Makefile at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 1754.
+1687059435.54: 	Spec::Benchmark::build(Spec::Benchmark::prime_r788=HASH(0x7f7fb8c982d0), Spec::Listfile::entry=HASH(0x7f7fb8c68350), "") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 1058
+
+1687059435.54: ERROR: Failed copying makefile into build directory!
+1687059435.54: *** Error building 788.prime_r base
+1687059435.54: ------------------------------------------------------------------------
+1687059435.54:   Building 788.prime_r peak my_project: (build_peak_my_project.0000) [2023-06-17 23:37:15]
+1687059435.54:    Creating directory at '/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/build/build_peak_my_project.0000' for 788.prime_r peak my_project build
+1687059435.54: ERROR: Missing reference checksum for /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/CPU/788.prime_r/src/Makefile at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/benchmark.pm line 1754.
+1687059435.54: 	Spec::Benchmark::build(Spec::Benchmark::prime_r788=HASH(0x7f7fb8ce9a10), Spec::Listfile::entry=HASH(0x7f7fb8ce0860), "") called at /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/bin/harness/runcpu line 1058
+
+1687059435.54: ERROR: Failed copying makefile into build directory!
+1687059435.54: *** Error building 788.prime_r peak
+1687059435.54: 
+1687059435.54: Build successes for specrate: None
+1687059435.54: Build errors for specrate: 788.prime_r(base; CE), 788.prime_r(peak; CE)
+1687059435.54: 
+1687059435.54: Build Complete
+1687059435.55: runcpu finished at 2023-06-17 23:37:15; 1 total seconds elapsed
+1687059435.72: The log for this run is in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/result/CPUv8.001.log
+1687059435.72: The debug log for this run is in /Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/result/CPUv8.001.log.debug
+
+1687059435.72: runcpu finished at 2023-06-17 23:37:15; 2 total seconds elapsed

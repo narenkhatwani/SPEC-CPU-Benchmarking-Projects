@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# tag_cpu_release - Do VCS tagging for SPEC CPU releases
+# No support is provided for this script.
+#
+# Copyright 2020 Standard Performance Evaluation Corporation
+#
+
+KITNUM=$1
+if [[ -z $KITNUM ]]; then
+    echo Usage: $0 '<kit number> [-n]'
+    exit 1
+fi
+shift
+
+if [[ $1 == '-n' ]]; then
+    FAKE=echo
+    set -x
+else
+    FAKE=
+fi
+
+KITNUMPRETTY=$(perl -I$SPEC/bin/common -e 'require "util_common.pl"; my $v=human_version(shift @ARGV); print "$v\n"' $KITNUM)
+if [[ -z $KITNUMPRETTY ]]; then
+    echo "Error: human_version did not output anything when fed '$KITNUMPRETTY'"
+    exit 1
+fi
+
+KITNUMTAG=$(echo $KITNUMPRETTY | tr -d ' 	')
+if [[ -z $KITNUMTAG ]]; then
+    echo "Error: tr destroyed '$KITNUMPRETTY'!"
+    exit 1
+fi
+
+if [[ -d $SPEC/.svn ]]; then
+    BASEURL=$(svn info $SPEC | awk '/^URL/{print $2}')
+    TAGURL=$(echo $BASEURL | sed -re 's#trunk|branches.*#tags#')
+    if [[ $TAGURL == $BASEURL ]]; then
+        echo "Error: tag would be made in branch (tag base is '$TAGURL'; base is '$BASEURL')"
+        exit 1
+    fi
+
+    set -x
+    $FAKE svn copy -m "release: Tagging $KITNUMPRETTY" $BASEURL $TAGURL/$KITNUMTAG
+    set +x
+elif [[ -d $SPEC/.git ]]; then
+    set -x
+    $FAKE git tag -am "release: Tagging $KITNUMPRETTY" $KITNUMTAG
+    $FAKE git submodule foreach "git tag -am \"release: Tagging $KITNUMPRETTY\" $KITNUMTAG"
+    set +x
+    echo
+    echo Remember to push the tags upstream:
+    echo
+    echo git push --tags
+    echo git submodule foreach git push --tags
+    echo
+else
+    echo "No VCS detected; no way to make a tag"
+fi
+
+# Editor settings: (please leave this at the end of the file)
+# vim: set filetype=sh syntax=sh shiftwidth=4 tabstop=8 expandtab nosmarttab:

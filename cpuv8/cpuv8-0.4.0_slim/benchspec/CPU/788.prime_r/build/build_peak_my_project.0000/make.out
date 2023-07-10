@@ -1,0 +1,3 @@
+g++ -m64 -std=c++17 -c -o prime.o -DSPEC -DNDEBUG    -Ofast -march=znver3 -flto   -fopenmp  -fpermissive   -DSPEC_LP64  prime.cpp
+clang: error: unsupported option '-fopenmp'
+specmake: *** [/Users/narenkhatwani/Desktop/cpuv8/cpuv8-0.4.0_slim/benchspec/Makefile.defaults:365: prime.o] Error 1
